@@ -1,0 +1,49 @@
+.account-page {
+  padding: 1.5rem 0 4.5rem;
+}
+
+  .account-page__grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .account-page__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+
+  .account-page__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 0.9rem;
+    background: var(--surface);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .account-page__tab {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-radius: var(--radius-xs);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+  }
+
+  .account-page__tab--active {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+
+@media (max-width: 1024px) {
+  .account-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,106 @@
+.why-choose-us {
+  position: relative;
+  color: var(--dark-text);
+}
+
+  .why-choose-us__inner {
+    position: relative;
+    z-index: 2;
+    padding: 3.75rem 0 4.25rem;
+  }
+
+  .why-choose-us__honeycomb {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+    align-items: stretch;
+  }
+
+  .why-choose-us__plaque {
+    background: rgba(28, 21, 18, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-gold-strong);
+    border-radius: var(--radius-md);
+    padding: 1.65rem;
+    box-shadow: var(--shadow-elevated);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .why-choose-us__plaque:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+  .why-choose-us__plaque-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(217, 154, 50, 0.22);
+  }
+
+  .why-choose-us__icon-hex {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: rgba(217, 154, 50, 0.14);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-choose-us__huge-stat {
+    font-family: var(--font-mono-price);
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  .why-choose-us__plaque-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .why-choose-us__index {
+    font-family: var(--font-mono-price);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .why-choose-us__title {
+    font-family: var(--font-heading);
+    font-size: 1.48rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    line-height: 1.18;
+  }
+
+  .why-choose-us__desc {
+    font-size: 0.88rem;
+    color: var(--dark-muted);
+    line-height: 1.6;
+  }
+
+@media (max-width: 1024px) {
+  .why-choose-us__honeycomb {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose-us__honeycomb {
+    grid-template-columns: 1fr;
+  }
+}

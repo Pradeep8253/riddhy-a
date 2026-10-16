@@ -1,0 +1,21 @@
+.category-offer-grid {
+  padding: 3rem 0;
+}
+
+  .category-offer-grid__bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+@media (max-width: 900px) {
+  .category-offer-grid__bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .category-offer-grid__bento {
+    grid-template-columns: 1fr;
+  }
+}

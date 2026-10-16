@@ -1,0 +1,101 @@
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: 110px;
+}
+
+  .product-gallery__stage {
+    position: relative;
+    height: 490px;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--primary);
+    box-shadow: var(--shadow-frame);
+    overflow: hidden;
+    background: var(--wood-dark);
+    cursor: crosshair;
+  }
+
+  .product-gallery__top-badges {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-gallery__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease-out;
+  }
+
+  .product-gallery__bottom-bar {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    right: 14px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .product-gallery__craft-tag,
+  .product-gallery__zoom-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    background: rgba(21, 32, 26, 0.86);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.68rem;
+    color: var(--primary);
+  }
+
+  .product-gallery__thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  .product-gallery__thumb {
+    height: 88px;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--border-gold);
+    overflow: hidden;
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+  }
+
+  .product-gallery__thumb--active,
+    .product-gallery__thumb:hover {
+      border-color: var(--primary);
+      opacity: 1;
+      box-shadow: var(--glow-gold);
+    }
+
+  .product-gallery__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+@media (max-width: 768px) {
+  .product-gallery {
+    position: static;
+  }
+
+  .product-gallery__stage {
+    height: 330px;
+  }
+}

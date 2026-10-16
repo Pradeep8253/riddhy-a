@@ -1,0 +1,190 @@
+.shop-page__quick-bar {
+    padding: 1.5rem 0 0.5rem;
+  }
+  .shop-page__quick-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+  .shop-page__quick-header a {
+      color: var(--secondary);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  .shop-page__quick-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+  .shop-page__quick-pill {
+    padding: 0.48rem 0.9rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border-subtle);
+    background: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-mono-price);
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+  }
+  .shop-page__quick-pill:hover {
+      border-color: var(--primary);
+      color: var(--secondary);
+    }
+  .shop-page__quick-pill--active {
+      background: var(--secondary);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  .shop-page__layout {
+    padding: 2rem 0 4rem;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 2.25rem;
+    align-items: start;
+  }
+  .shop-page__marriage-strip {
+    padding: 3.75rem 0;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+  }
+  .shop-page__marriage-head {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .shop-page__marriage-head h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin: 0.3rem 0;
+    }
+  .shop-page__marriage-head p {
+      font-size: 0.9rem;
+      color: var(--dark-muted);
+      max-width: 650px;
+    }
+  .shop-page__marriage-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--primary);
+  }
+  .shop-page__marriage-cards {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .shop-page__marriage-card {
+    padding: 1.5rem;
+    background: rgba(17, 42, 31, 0.78);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .shop-page__marriage-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+    }
+  .shop-page__marriage-card p {
+      font-size: 0.82rem;
+      color: var(--dark-muted);
+    }
+  .shop-page__marriage-tier {
+    font-family: var(--font-mono-price);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    color: var(--primary);
+  }
+  .shop-page__marriage-price {
+    font-family: var(--font-mono-price);
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+  .shop-page__marriage-price strong {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+  .shop-page__marriage-price s {
+      font-size: 0.82rem;
+      color: var(--dark-muted);
+    }
+  .shop-page__assurance {
+    padding: 3.25rem 0 1rem;
+  }
+  .shop-page__assurance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .shop-page__assurance-card {
+    padding: 1.35rem;
+    background: var(--surface);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .shop-page__assurance-card svg {
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+  .shop-page__assurance-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+  .shop-page__assurance-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+@media (max-width: 1120px) {
+  .shop-page__marriage-cards,
+  .shop-page__assurance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .shop-page__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shop-page__marriage-cards,
+  .shop-page__assurance-grid {
+    grid-template-columns: 1fr;
+  }
+}

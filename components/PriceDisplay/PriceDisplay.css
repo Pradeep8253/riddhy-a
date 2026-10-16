@@ -1,0 +1,62 @@
+.price-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-family: var(--font-mono-price);
+}
+
+  .price-display__main {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .price-display__current {
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .price-display__mrp {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+
+  .price-display__percent {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.12rem 0.45rem;
+    border-radius: var(--radius-xs);
+    background: rgba(217, 154, 50, 0.18);
+    color: var(--primary-dark);
+    border: 1px solid var(--border-gold);
+  }
+
+  .price-display__savings {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+
+  .price-display--sm .price-display__current {
+    font-size: 1.05rem;
+  }
+
+  .price-display--md .price-display__current {
+    font-size: 1.32rem;
+  }
+
+  .price-display--lg .price-display__current {
+    font-size: clamp(1.65rem, 2.5vw, 2.25rem);
+  }
+
+  .price-display--dark .price-display__current {
+    color: var(--dark-text);
+  }
+
+  .price-display--dark .price-display__percent,
+  .price-display--dark .price-display__savings {
+    color: var(--primary);
+  }

@@ -1,0 +1,64 @@
+.craft-showcase {
+  padding: 3.75rem 0;
+}
+
+  .craft-showcase__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+  }
+
+  .craft-showcase__card {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-carved);
+    overflow: hidden;
+  }
+
+  .craft-showcase__media {
+    position: relative;
+    height: 220px;
+  }
+
+  .craft-showcase__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  .craft-showcase__media span {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      padding: 0.25rem 0.65rem;
+      background: var(--wood-dark);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono-price);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+  .craft-showcase__body {
+    padding: 1.35rem;
+  }
+
+  .craft-showcase__body h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      margin-bottom: 0.45rem;
+    }
+
+  .craft-showcase__body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+@media (max-width: 900px) {
+  .craft-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+}

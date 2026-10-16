@@ -1,0 +1,32 @@
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono-price);
+}
+
+  .rating-stars__icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .rating-stars__star {
+    color: var(--primary);
+    fill: var(--primary);
+  }
+
+  .rating-stars__star--half {
+    opacity: 0.45;
+  }
+
+  .rating-stars__score {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .rating-stars__count {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+  }

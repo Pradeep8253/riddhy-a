@@ -1,0 +1,215 @@
+.quick-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+  .quick-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 42, 30, 0.78);
+    backdrop-filter: blur(8px);
+  }
+
+  .quick-modal__dialog {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 980px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-elevated), var(--glow-gold);
+  }
+
+  .quick-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--wood-dark);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quick-modal__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .quick-modal__gallery {
+    padding: 1.5rem;
+    background: var(--wood-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .quick-modal__main-img-wrap {
+    position: relative;
+    height: 360px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1.5px solid var(--primary);
+  }
+
+  .quick-modal__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .quick-modal__thumbs {
+    display: flex;
+    gap: 0.65rem;
+  }
+
+  .quick-modal__thumb {
+    width: 68px;
+    height: 56px;
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+    border: 2px solid transparent;
+    opacity: 0.65;
+  }
+
+  .quick-modal__thumb--active {
+      border-color: var(--primary);
+      opacity: 1;
+    }
+
+  .quick-modal__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  .quick-modal__info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .quick-modal__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary);
+  }
+
+  .quick-modal__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+  }
+
+  .quick-modal__price-box {
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-sm);
+  }
+
+  .quick-modal__desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+
+  .quick-modal__specs-mini {
+    font-size: 0.84rem;
+    padding: 0.75rem;
+    background: var(--teak-tint);
+    border-left: 3px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .quick-modal__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 0.4rem;
+  }
+
+  .quick-modal__qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid var(--wood-dark);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    font-family: var(--font-mono-price);
+  }
+
+  .quick-modal__qty button {
+      width: 38px;
+      height: 44px;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+  .quick-modal__qty span {
+      min-width: 32px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+  .quick-modal__add {
+    flex: 1;
+  }
+
+  .quick-modal__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.78rem;
+    font-family: var(--font-mono-price);
+    color: var(--secondary);
+  }
+
+  .quick-modal__trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+  .quick-modal__full-link {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+@media (max-width: 768px) {
+  .quick-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-modal__main-img-wrap {
+    height: 240px;
+  }
+}

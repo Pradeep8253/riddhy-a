@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="carvedGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2C46D"/>
+      <stop offset="50%" stop-color="#D99A32"/>
+      <stop offset="100%" stop-color="#8C5811"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="196" height="196" fill="none" stroke="url(#carvedGold)" stroke-width="2"/>
+  <rect x="8" y="8" width="184" height="184" fill="none" stroke="url(#carvedGold)" stroke-width="1" stroke-dasharray="6 3"/>
+  <path d="M2 22 L22 2 M178 2 L198 22 M2 178 L22 198 M178 198 L198 178" stroke="url(#carvedGold)" stroke-width="1.5"/>
+  <circle cx="14" cy="14" r="3" fill="#D99A32"/>
+  <circle cx="186" cy="14" r="3" fill="#D99A32"/>
+  <circle cx="14" cy="186" r="3" fill="#D99A32"/>
+  <circle cx="186" cy="186" r="3" fill="#D99A32"/>
+</svg>

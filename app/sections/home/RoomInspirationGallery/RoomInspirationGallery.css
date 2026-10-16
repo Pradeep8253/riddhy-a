@@ -1,0 +1,191 @@
+.room-gallery {
+  padding: 3.5rem 0 4.5rem;
+  position: relative;
+}
+
+  .room-gallery__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .room-gallery__masonry {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 235px;
+    gap: 1.15rem;
+  }
+
+  .room-gallery__tile {
+    position: relative;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow-carved);
+    overflow: hidden;
+    background: var(--wood-dark);
+  }
+
+  .room-gallery .room-card--large {
+    grid-column: span 7;
+    grid-row: span 2;
+  }
+
+  .room-gallery .room-card--tall {
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+
+  .room-gallery .room-card--wide {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  .room-gallery .room-card--compact {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+
+  .room-gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-luxury);
+  }
+
+  .room-gallery__tile:hover .room-gallery__img {
+    transform: scale(1.05);
+  }
+
+  .room-gallery__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 40%,
+      rgba(21, 32, 26, 0.85) 100%
+    );
+    pointer-events: none;
+  }
+
+  .room-gallery__hotspot-wrap {
+    position: absolute;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+  }
+
+  .room-gallery__pin {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--wood-dark);
+    border: 2px solid var(--surface);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseRing 2s infinite;
+    transition: transform var(--transition-fast);
+  }
+
+  .room-gallery__pin--active {
+      background: var(--wood-dark);
+      color: var(--primary);
+      border-color: var(--primary);
+      transform: rotate(45deg) scale(1.1);
+    }
+
+  .room-gallery__popover {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 215px;
+    padding: 0.75rem 0.9rem;
+    background: rgba(21, 32, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--dark-text);
+    box-shadow: var(--shadow-elevated);
+    z-index: 10;
+  }
+
+  .room-gallery__popover h5 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0.15rem 0 0.4rem;
+    }
+
+  .room-gallery__popover-cat {
+    font-family: var(--font-mono-price);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+  }
+
+  .room-gallery__popover-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono-price);
+    font-size: 0.82rem;
+  }
+
+  .room-gallery__popover-bottom strong {
+      color: var(--primary-light);
+    }
+
+  .room-gallery__popover-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.72rem;
+    color: var(--primary);
+    text-transform: uppercase;
+  }
+
+  .room-gallery__caption {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    right: 16px;
+    z-index: 3;
+    color: var(--dark-text);
+  }
+
+  .room-gallery__caption span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--font-mono-price);
+      font-size: 0.68rem;
+      color: var(--primary);
+    }
+
+  .room-gallery__caption h3 {
+      font-family: var(--font-heading);
+      font-size: 1.38rem;
+      line-height: 1.15;
+    }
+
+@media (max-width: 1024px) {
+  .room-gallery__masonry {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 260px;
+  }
+
+  .room-gallery .room-card--large,
+  .room-gallery .room-card--tall,
+  .room-gallery .room-card--wide,
+  .room-gallery .room-card--compact {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .room-gallery__masonry {
+    grid-template-columns: 1fr;
+  }
+}

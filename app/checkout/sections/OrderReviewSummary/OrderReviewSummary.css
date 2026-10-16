@@ -1,0 +1,119 @@
+.checkout-review {
+  padding: 1.5rem;
+  background: var(--wood-dark);
+  color: var(--dark-text);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-carved);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+  .checkout-review__title {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    color: var(--primary);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-gold);
+  }
+
+  .checkout-review__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .checkout-review__item {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 0.65rem;
+    align-items: center;
+    font-size: 0.82rem;
+  }
+
+  .checkout-review__item img {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-xs);
+      object-fit: cover;
+      border: 1px solid var(--primary);
+    }
+
+  .checkout-review__item h5 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      line-height: 1.15;
+    }
+
+  .checkout-review__item span {
+      font-family: var(--font-mono-price);
+      font-size: 0.68rem;
+      color: var(--dark-muted);
+    }
+
+  .checkout-review__item strong {
+      font-family: var(--font-mono-price);
+      color: var(--primary-light);
+    }
+
+  .checkout-review__addr {
+    padding: 0.75rem;
+    background: rgba(15, 42, 30, 0.72);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-xs);
+    font-size: 0.78rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .checkout-review__addr span {
+      font-family: var(--font-mono-price);
+      font-size: 0.65rem;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+
+  .checkout-review__totals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.84rem;
+  }
+
+  .checkout-review__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkout-review__row--save {
+      color: var(--primary);
+    }
+
+  .checkout-review__row--grand {
+      margin-top: 0.35rem;
+      padding-top: 0.65rem;
+      border-top: 1px dashed var(--primary);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+  .checkout-review__save {
+    color: var(--primary);
+  }
+
+  .checkout-review__trust {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.7rem;
+    color: var(--dark-muted);
+  }
+
+  .checkout-review__trust svg {
+      color: var(--primary);
+    }

@@ -1,0 +1,73 @@
+.meet-team {
+  padding: 3.75rem 0;
+}
+
+  .meet-team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .meet-team__card {
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-carved);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meet-team__photo-wrap {
+    height: 240px;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .meet-team__photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  .meet-team__body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .meet-team__body h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+    }
+
+  .meet-team__body p {
+      font-size: 0.84rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+  .meet-team__exp {
+    font-family: var(--font-mono-price);
+    font-size: 0.68rem;
+    color: var(--secondary);
+    font-weight: 700;
+  }
+
+  .meet-team__role {
+    font-size: 0.82rem;
+    color: var(--primary-dark);
+  }
+
+@media (max-width: 1024px) {
+  .meet-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .meet-team__grid {
+    grid-template-columns: 1fr;
+  }
+}

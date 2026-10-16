@@ -1,0 +1,89 @@
+.flash-deals {
+  position: relative;
+  background: var(--wood-dark);
+  color: var(--dark-text);
+}
+
+  .flash-deals__ticker {
+    background: var(--primary);
+    color: var(--wood-dark);
+    padding: 0.48rem 0;
+    overflow: hidden;
+    border-top: 1px solid var(--wood-dark);
+    border-bottom: 2px solid var(--wood-dark);
+  }
+
+  .flash-deals__ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 28s linear infinite;
+  }
+
+  .flash-deals__ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding-inline: 1.5rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  .flash-deals__inner {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 0 3.75rem;
+  }
+
+  .flash-deals__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .flash-deals__card-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .flash-deals__stock-bar {
+    padding: 0.45rem 0.75rem;
+    background: rgba(15, 42, 30, 0.75);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.7rem;
+    color: var(--primary);
+  }
+
+  .flash-deals__progress {
+    width: 90px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+  }
+
+  .flash-deals__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--status-danger) 100%);
+  }
+
+@media (max-width: 1024px) {
+  .flash-deals__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .flash-deals__grid {
+    grid-template-columns: 1fr;
+  }
+}

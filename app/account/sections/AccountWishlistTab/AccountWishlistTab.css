@@ -1,0 +1,30 @@
+.account-wishlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+  .account-wishlist__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .account-wishlist__head h3 {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+    }
+
+  .account-wishlist__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+  }
+
+@media (max-width: 768px) {
+  .account-wishlist__grid {
+    grid-template-columns: 1fr;
+  }
+}

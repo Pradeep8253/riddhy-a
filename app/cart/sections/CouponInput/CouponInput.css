@@ -1,0 +1,106 @@
+.coupon-box {
+  padding: 1.15rem;
+  background: var(--surface);
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-carved);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+  .coupon-box--shake {
+    animation: shakeError 0.45s ease-in-out;
+  }
+
+  .coupon-box__head {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--wood-dark);
+  }
+
+  .coupon-box__head svg {
+      color: var(--primary-dark);
+    }
+
+  .coupon-box__form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .coupon-box__form input {
+      flex: 1;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--border-wood);
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono-price);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+    }
+
+  .coupon-box__form button {
+      padding: 0.55rem 1rem;
+      background: var(--wood-dark);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-xs);
+      font-family: var(--font-mono-price);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+  .coupon-box__quick-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .coupon-box__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    background: var(--background);
+    border: 1px dashed var(--primary-dark);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.7rem;
+  }
+
+  .coupon-box__pill strong {
+      color: var(--wood-dark);
+    }
+
+  .coupon-box__pill span {
+      color: var(--secondary);
+    }
+
+  .coupon-box__applied {
+    padding: 0.65rem 0.85rem;
+    background: rgba(23, 77, 53, 0.12);
+    border: 1px solid var(--secondary);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .coupon-box__applied strong {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-mono-price);
+      font-size: 0.84rem;
+      color: var(--secondary);
+    }
+
+  .coupon-box__applied p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }

@@ -1,0 +1,72 @@
+.address-book {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+  .address-book h3 {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+  }
+
+  .address-book__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .address-book__card {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1.5px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-carved);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .address-book__card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+    }
+
+  .address-book__card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+  .address-book__card small {
+      font-family: var(--font-mono-price);
+      font-size: 0.76rem;
+      color: var(--secondary);
+    }
+
+  .address-book__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+  }
+
+  .address-book__type {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+  }
+
+  .address-book__default {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--secondary);
+  }
+
+@media (max-width: 768px) {
+  .address-book__grid {
+    grid-template-columns: 1fr;
+  }
+}

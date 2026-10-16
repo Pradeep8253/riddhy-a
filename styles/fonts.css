@@ -1,0 +1,39 @@
+:root {
+  --font-display: var(--next-font-display, 'Playfair Display'), Georgia, serif;
+  --font-heading: var(--next-font-heading, 'Cormorant Garamond'), Georgia, serif;
+  --font-script: var(--next-font-script, 'Marcellus'), Georgia, serif;
+  --font-body: var(--next-font-body, 'Plus Jakarta Sans'), system-ui, -apple-system, sans-serif;
+  --font-mono-price: var(--next-font-mono, 'Space Grotesk'), monospace;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-price {
+  font-family: var(--font-mono-price);
+  font-variant-numeric: tabular-nums;
+}
+
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 0.85;
+  float: left;
+  margin-right: 0.85rem;
+  margin-top: 0.15rem;
+  color: var(--primary);
+}

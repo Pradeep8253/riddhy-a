@@ -1,0 +1,139 @@
+.texture-paper {
+  position: relative;
+  background-color: var(--background);
+}
+
+.texture-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--paper-noise-overlay);
+  background-repeat: repeat;
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texture-wood-dark {
+  position: relative;
+  background: linear-gradient(145deg, var(--wood-dark) 0%, #1F140F 55%, var(--dark-bg) 100%);
+  color: var(--dark-text);
+}
+
+.texture-wood-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--wood-grain-overlay);
+  background-repeat: repeat;
+  opacity: 0.065;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texture-emerald-dark {
+  position: relative;
+  background: linear-gradient(145deg, var(--secondary) 0%, var(--dark-bg) 65%, var(--wood-dark) 100%);
+  color: var(--dark-text);
+}
+
+.texture-emerald-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--wood-grain-overlay);
+  background-repeat: repeat;
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.carved-card {
+  border: 1px solid var(--border-wood);
+  box-shadow: var(--shadow-carved);
+  position: relative;
+}
+
+.carved-frame-img {
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-frame);
+}
+
+/* Luxury Wood-Polish Primary CTA Button */
+.btn-wood-polish {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.85rem;
+  background: linear-gradient(135deg, #E5AE49 0%, var(--primary) 55%, var(--primary-dark) 100%);
+  color: var(--wood-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 4px 16px rgba(217, 154, 50, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-wood-polish::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transform: translateX(-140%) skewX(-25deg);
+  transition: transform 0.65s var(--ease-luxury);
+}
+
+.btn-wood-polish:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-gold), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-wood-polish:hover::after {
+  transform: translateX(260%) skewX(-25deg);
+}
+
+/* Architectural Outline Secondary CTA Button */
+.btn-wood-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.88rem 1.75rem;
+  background: rgba(23, 77, 53, 0.06);
+  color: var(--secondary);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.83rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid var(--secondary);
+  transition: all var(--transition-fast);
+}
+
+.texture-wood-dark .btn-wood-outline,
+.texture-emerald-dark .btn-wood-outline {
+  background: rgba(217, 154, 50, 0.1);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-wood-outline:hover {
+  background: var(--primary);
+  color: var(--wood-dark);
+  border-color: var(--primary);
+  box-shadow: var(--glow-gold);
+}

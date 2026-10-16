@@ -1,0 +1,58 @@
+.animated-checkmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  margin-inline: auto;
+}
+
+  .animated-checkmark__svg {
+    width: 100%;
+    height: 100%;
+    background: var(--wood-dark);
+    border-radius: 50%;
+    box-shadow: var(--glow-gold), var(--shadow-carved);
+  }
+
+  .animated-checkmark__confetti {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .animated-checkmark__confetti i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 2px;
+      animation: confetti-burst 0.9s ease-out forwards;
+    }
+
+  .animated-checkmark__confetti i:nth-child(1) { --tx: -75px; --ty: -65px; }
+
+  .animated-checkmark__confetti i:nth-child(2) { --tx: 75px; --ty: -65px; }
+
+  .animated-checkmark__confetti i:nth-child(3) { --tx: -95px; --ty: 10px; }
+
+  .animated-checkmark__confetti i:nth-child(4) { --tx: 95px; --ty: 10px; }
+
+  .animated-checkmark__confetti i:nth-child(5) { --tx: -50px; --ty: 75px; }
+
+  .animated-checkmark__confetti i:nth-child(6) { --tx: 50px; --ty: 75px; }
+
+  .animated-checkmark__confetti i:nth-child(7) { --tx: 0px; --ty: -95px; }
+
+  .animated-checkmark__confetti i:nth-child(8) { --tx: 0px; --ty: 90px; }
+
+  .animated-checkmark__confetti i:nth-child(9) { --tx: -80px; --ty: -30px; }
+
+  .animated-checkmark__confetti i:nth-child(10) { --tx: 80px; --ty: -30px; }
+
+  .animated-checkmark__confetti i:nth-child(11) { --tx: -40px; --ty: -85px; }
+
+  .animated-checkmark__confetti i:nth-child(12) { --tx: 40px; --ty: -85px; }

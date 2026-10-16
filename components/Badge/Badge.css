@@ -1,0 +1,51 @@
+.rf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.72rem;
+  font-family: var(--font-mono-price);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-carved);
+  position: relative;
+  z-index: 3;
+  border: 1px solid var(--border-gold);
+}
+
+  .rf-badge__pin {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .rf-badge--bestseller {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--wood-dark);
+  }
+
+  .rf-badge--new {
+    background: var(--secondary);
+    color: var(--dark-text);
+    border-color: var(--primary);
+  }
+
+  .rf-badge--discount {
+    background: var(--wood-dark);
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .rf-badge--craft {
+    background: var(--wood-mid);
+    color: var(--dark-text);
+  }
+
+  .rf-badge--out {
+    background: var(--dark-bg-2);
+    color: var(--text-muted);
+    border-color: var(--text-muted);
+  }

@@ -1,0 +1,29 @@
+.recommended-cross {
+  position: relative;
+  background: var(--wood-dark);
+  color: var(--dark-text);
+}
+
+  .recommended-cross__inner {
+    position: relative;
+    z-index: 2;
+    padding: 3rem 0 3.75rem;
+  }
+
+  .recommended-cross__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+@media (max-width: 1024px) {
+  .recommended-cross__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .recommended-cross__grid {
+    grid-template-columns: 1fr;
+  }
+}

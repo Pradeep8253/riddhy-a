@@ -1,0 +1,364 @@
+.payment-tabs {
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border-wood);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+  .payment-tabs__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .payment-tabs__title {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
+  }
+
+  .payment-tabs__sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+  }
+
+  .payment-tabs__secure-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    background: rgba(23, 77, 53, 0.1);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .payment-tabs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .payment-tabs__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.9rem 1.15rem;
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-xs);
+    background: var(--background);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    transition: all var(--transition-fast);
+  }
+
+  .payment-tabs__item-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+  .payment-tabs__item--active {
+      border-color: var(--secondary);
+      background: rgba(23, 77, 53, 0.08);
+      color: var(--secondary);
+      box-shadow: var(--shadow-soft);
+    }
+
+  .payment-tabs__item-badge {
+    padding: 0.2rem 0.55rem;
+    background: var(--accent);
+    color: var(--wood-dark);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .payment-tabs__panel {
+    padding: 1.4rem;
+    background: var(--background);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.15rem;
+  }
+
+  .payment-tabs__field-label {
+    display: block;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.55rem;
+  }
+
+  .payment-tabs__upi-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 1.35rem;
+    align-items: center;
+  }
+
+  .payment-tabs__apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .payment-tabs__app-chip {
+    padding: 0.42rem 0.8rem;
+    background: var(--surface);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .payment-tabs__app-chip--active {
+      background: var(--secondary);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+  .payment-tabs__upi-input-row {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .payment-tabs__verify-btn {
+    padding: 0.65rem 1rem;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+
+  .payment-tabs__verified {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+    font-size: 0.78rem;
+    color: var(--success);
+  }
+
+  .payment-tabs__qr-box {
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px dashed var(--primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .payment-tabs__qr-box strong {
+      display: block;
+      font-family: var(--font-mono-price);
+      font-size: 0.92rem;
+      color: var(--secondary);
+    }
+
+  .payment-tabs__qr-box p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0.15rem 0;
+    }
+
+  .payment-tabs__qr-frame {
+    padding: 0.55rem;
+    background: var(--background);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-xs);
+    color: var(--wood-dark);
+  }
+
+  .payment-tabs__qr-merchant {
+    display: block;
+    font-family: var(--font-mono-price);
+    font-size: 0.62rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+  }
+
+  /* Live 3D Card Preview */
+
+  .payment-tabs__card-preview {
+    padding: 1.35rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--primary);
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .payment-tabs__card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono-price);
+    font-size: 0.68rem;
+    color: var(--primary);
+  }
+
+  .payment-tabs__card-number {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-mono-price);
+    font-size: 1.35rem;
+    letter-spacing: 0.12em;
+    color: var(--dark-text);
+  }
+
+  .payment-tabs__card-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono-price);
+  }
+
+  .payment-tabs__card-bottom small {
+      display: block;
+      font-size: 0.6rem;
+      color: var(--dark-muted);
+    }
+
+  .payment-tabs__card-bottom strong {
+      font-size: 0.84rem;
+      color: var(--accent);
+    }
+
+  .payment-tabs__card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .payment-tabs__input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-xs);
+    background: var(--surface);
+    font-size: 0.86rem;
+  }
+
+  .payment-tabs__input--full {
+      grid-column: span 2;
+    }
+
+  /* EMI Plans */
+
+  .payment-tabs__emi-plans {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .payment-tabs__emi-card {
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border-wood);
+    border-radius: var(--radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .payment-tabs__emi-card strong {
+      display: block;
+      font-family: var(--font-mono-price);
+      font-size: 0.85rem;
+      color: var(--text-primary);
+    }
+
+  .payment-tabs__emi-card span {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+  .payment-tabs__emi-card--active {
+      border: 2px solid var(--secondary);
+      background: rgba(23, 77, 53, 0.06);
+    }
+
+  .payment-tabs__emi-tag {
+    padding: 0.2rem 0.45rem;
+    background: var(--primary);
+    color: var(--wood-dark) !important;
+    font-family: var(--font-mono-price);
+    font-size: 0.62rem !important;
+    font-weight: 700;
+    border-radius: var(--radius-xs);
+  }
+
+  .payment-tabs__cod-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .payment-tabs__cod-breakdown div {
+      padding: 0.85rem;
+      background: var(--surface);
+      border: 1px solid var(--border-wood);
+      border-radius: var(--radius-xs);
+    }
+
+  .payment-tabs__cod-breakdown span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+  .payment-tabs__cod-breakdown strong {
+      font-family: var(--font-mono-price);
+      font-size: 1.25rem;
+      color: var(--secondary);
+    }
+
+  .payment-tabs__cod-note {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .payment-tabs__trust {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
+@media (max-width: 768px) {
+  .payment-tabs__upi-grid,
+  .payment-tabs__emi-plans,
+  .payment-tabs__cod-breakdown {
+    grid-template-columns: 1fr;
+  }
+}

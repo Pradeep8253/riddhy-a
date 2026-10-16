@@ -1,0 +1,28 @@
+.cart-page {
+  padding: 1.5rem 0 4.5rem;
+}
+
+  .cart-page__grid {
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .cart-page__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: sticky;
+    top: 110px;
+  }
+
+@media (max-width: 1024px) {
+  .cart-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-page__sidebar {
+    position: static;
+  }
+}

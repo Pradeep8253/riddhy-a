@@ -1,0 +1,183 @@
+.filter-sidebar {
+  background: var(--surface);
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-carved);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+  .filter-sidebar__backdrop {
+    display: none;
+  }
+
+  .filter-sidebar__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .filter-sidebar__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .filter-sidebar__title svg {
+      color: var(--primary-dark);
+    }
+
+  .filter-sidebar__head-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .filter-sidebar__reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+  }
+
+  .filter-sidebar__close-mobile {
+    display: none;
+  }
+
+  .filter-sidebar__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-wood);
+  }
+
+  .filter-sidebar__group:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+  .filter-sidebar__group-title {
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--secondary);
+  }
+
+  .filter-sidebar__radio-list,
+  .filter-sidebar__check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.42rem;
+  }
+
+  .filter-sidebar__Option {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.86rem;
+    cursor: pointer;
+  }
+
+  .filter-sidebar__Option input {
+      accent-color: var(--primary-dark);
+      width: 15px;
+      height: 15px;
+    }
+
+  .filter-sidebar__price-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filter-sidebar__price-val {
+    font-family: var(--font-mono-price);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+
+  .filter-sidebar__range {
+    width: 100%;
+    accent-color: var(--primary);
+  }
+
+  .filter-sidebar__range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono-price);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+  }
+
+  .filter-sidebar__rating-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .filter-sidebar__rating-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-xs);
+    font-family: var(--font-mono-price);
+    font-size: 0.74rem;
+    background: var(--background);
+  }
+
+  .filter-sidebar__rating-btn--active {
+      background: var(--wood-dark);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+@media (max-width: 1024px) {
+  .filter-sidebar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 135;
+    max-height: 82vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    transform: translateY(105%);
+    transition: transform 0.35s var(--ease-luxury);
+  }
+
+    .filter-sidebar--open {
+      transform: translateY(0);
+    }
+
+    .filter-sidebar__backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 130;
+      background: rgba(15, 42, 30, 0.72);
+      backdrop-filter: blur(4px);
+    }
+
+    .filter-sidebar__close-mobile {
+      display: inline-flex;
+    }
+}

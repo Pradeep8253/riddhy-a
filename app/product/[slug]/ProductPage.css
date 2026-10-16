@@ -1,0 +1,21 @@
+.product-detail-page {
+  padding-bottom: 4.5rem;
+}
+
+  .product-detail-page__container {
+    padding-top: 1.5rem;
+  }
+
+  .product-detail-page__hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.5rem;
+    margin-top: 1.25rem;
+    align-items: start;
+  }
+
+@media (max-width: 1024px) {
+  .product-detail-page__hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

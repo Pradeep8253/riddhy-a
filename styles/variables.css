@@ -1,0 +1,75 @@
+:root {
+  /* Primary Brand (Exact User Theme Tokens) */
+  --primary: #D99A32;          /* Warm Amber Gold / Teak Brass */
+  --primary-dark: #B57B1C;
+  --primary-light: #ECC06C;
+  --secondary: #174D35;        /* Deep Forest Emerald */
+  --secondary-light: #216648;
+  --secondary-dark: #0E3322;
+
+  /* Backgrounds */
+  --background: #F7F3EA;       /* Warm Ivory */
+  --background-alt: #EFE8D8;   /* Soft Parchment */
+  --surface: #FFFFFF;          /* Pure Surface */
+  --surface-warm: #FAF7F0;     /* Warm Card Surface */
+
+  /* Typography */
+  --text-primary: #252923;     /* Charcoal Espresso */
+  --text-secondary: #174D35;   /* Deep Emerald */
+  --text-muted: #62665E;       /* Warm Slate Muted */
+
+  /* Accents */
+  --accent: #E8D7B5;           /* Soft Sand Beige */
+  --accent-deep: #D5BE92;
+
+  /* Authentic Wooden Palette */
+  --wood-dark: #2A1B15;        /* Deep Smoked Walnut */
+  --wood-mid: #5A3822;         /* Seasoned Burmese Teak */
+  --wood-light: #9C6B43;       /* Warm Honey Oak */
+  --wood-tint: rgba(90, 56, 34, 0.06);
+  --wood-grain-overlay: url('/textures/wood-grain.png');
+  --paper-noise-overlay: url('/textures/paper-noise.png');
+
+  /* Dark Architectural Sections (Emerald + Walnut Fusion) */
+  --dark-bg: #112A1F;          /* Deep Emerald Timber */
+  --dark-bg-2: #1C1512;        /* Espresso Walnut Dark */
+  --dark-surface: #1A382B;
+  --dark-walnut-surface: #261B16;
+  --dark-text: #F7F3EA;
+  --dark-muted: #C7BFA9;
+  --dark-accent: #D99A32;
+
+  /* Refined Borders */
+  --border-subtle: rgba(37, 41, 35, 0.1);
+  --border-wood: rgba(90, 56, 34, 0.18);
+  --border-gold: rgba(217, 154, 50, 0.34);
+  --border-gold-strong: rgba(217, 154, 50, 0.65);
+
+  /* Semantic Status */
+  --status-success: #174D35;
+  --status-danger: #B4372A;
+  --status-warning: #D99A32;
+
+  /* Luxury Shadows & Carved Depth */
+  --shadow-soft: 0 8px 30px rgba(37, 41, 35, 0.06);
+  --shadow-elevated: 0 22px 54px rgba(23, 20, 18, 0.14);
+  --shadow-carved: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 10px 28px rgba(37, 41, 35, 0.07);
+  --shadow-frame: inset 0 0 0 1px rgba(217, 154, 50, 0.45), 0 18px 44px rgba(28, 21, 18, 0.16);
+  --glow-gold: 0 10px 28px rgba(217, 154, 50, 0.28);
+
+  /* Layout & Spacing */
+  --container-max: 1400px;
+  --container-pad: clamp(1.25rem, 3.5vw, 3rem);
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.22s var(--ease-luxury);
+  --transition-med: 0.42s var(--ease-luxury);
+  --transition-slow: 0.75s var(--ease-luxury);
+}

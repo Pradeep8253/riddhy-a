@@ -1,0 +1,44 @@
+.wood-divider {
+  width: 100%;
+  padding: 0.55rem 0;
+  background: linear-gradient(90deg, var(--wood-dark) 0%, var(--secondary) 50%, var(--wood-dark) 100%);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  position: relative;
+  z-index: 4;
+}
+
+  .wood-divider__rail {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .wood-divider__line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    opacity: 0.55;
+  }
+
+  .wood-divider__medallion {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-script);
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .wood-divider__diamond {
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    transform: rotate(45deg);
+    display: inline-block;
+  }

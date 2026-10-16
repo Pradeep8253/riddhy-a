@@ -1,0 +1,41 @@
+.filter-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+  .filter-chips__label {
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .filter-chips__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .filter-chips__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.7rem;
+    background: var(--wood-dark);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+  }
+
+  .filter-chips__clear {
+    font-family: var(--font-mono-price);
+    font-size: 0.72rem;
+    color: var(--status-danger);
+    font-weight: 700;
+    padding-inline: 0.4rem;
+  }

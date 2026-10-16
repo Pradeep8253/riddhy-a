@@ -1,0 +1,52 @@
+.story-timeline {
+  padding: 3.5rem 0;
+}
+
+  .story-timeline__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  .story-timeline__card {
+    padding: 1.35rem;
+    background: var(--surface);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-carved);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .story-timeline__year {
+    font-family: var(--font-mono-price);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1;
+  }
+
+  .story-timeline__title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    line-height: 1.15;
+  }
+
+  .story-timeline__desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+@media (max-width: 1100px) {
+  .story-timeline__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .story-timeline__grid {
+    grid-template-columns: 1fr;
+  }
+}

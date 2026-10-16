@@ -1,0 +1,58 @@
+.wishlist-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(21, 32, 26, 0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  color: var(--dark-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  z-index: 4;
+}
+
+  .wishlist-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--glow-gold);
+  }
+
+  .wishlist-btn--active {
+    background: var(--primary);
+    color: var(--wood-dark);
+  }
+
+  .wishlist-btn--active .wishlist-btn__icon {
+    fill: var(--wood-dark);
+  }
+
+  .wishlist-btn__sparks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .wishlist-btn__sparks i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: confetti-burst 0.6s ease-out forwards;
+  }
+
+  .wishlist-btn__sparks i:nth-child(1) { --tx: -22px; --ty: -20px; }
+
+  .wishlist-btn__sparks i:nth-child(2) { --tx: 22px; --ty: -20px; }
+
+  .wishlist-btn__sparks i:nth-child(3) { --tx: -26px; --ty: 6px; }
+
+  .wishlist-btn__sparks i:nth-child(4) { --tx: 26px; --ty: 6px; }
+
+  .wishlist-btn__sparks i:nth-child(5) { --tx: 0px; --ty: -28px; }
+
+  .wishlist-btn__sparks i:nth-child(6) { --tx: 0px; --ty: 24px; }
